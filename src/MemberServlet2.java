@@ -41,11 +41,12 @@ public class MemberServlet2 extends HttpServlet {
 			vo.setName(_name);
 			vo.setEmail(_email);
 			dao.addMember(vo);
-			
+		////command 값이 delMember인 경우 ID를 가져와 SQL문으로 전달해서 삭제합니다.
 		}else if(command!= null && command.equals("delMember")) {
 			String id = request.getParameter("id");
 			dao.delMember(id);
 		}
+		////다시 조회해줌.
 		List list = dao.listMembers();
 		out.print("<html><body>");
 		out.print("<table border=1><tr align='center' "+ "bgcolor='lightgreen'>");
@@ -66,6 +67,7 @@ public class MemberServlet2 extends HttpServlet {
 			//날짜 갖고옴
 			out.print("<tr><td>" + id + "</td><td>" + pwd + "</td><td>" + name + "</td><td>" + email + "</td><td>"
 		               + joinDate + "</td><td>" + "<a href='member2?command=delMember&id=" + id
+		               ////삭제를 클릭하면 command 값과 회원 ID를 서블릿으로 전송합니다.
 		               + "'> 삭제 </a></td><tr>");
 		}
 		out.print("</table></body></html>");
