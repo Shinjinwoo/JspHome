@@ -16,7 +16,12 @@ public class MemberServlet extends HttpServlet {
                                                     throws ServletException, IOException {
       response.setContentType("text/html;charset=utf-8");
       PrintWriter out=response.getWriter();	
-      MemberDAO2 dao=new MemberDAO2();
+      
+      
+      MemberDAO3 dao=new MemberDAO3();
+      
+      
+      
       List<MemberVO> list=dao.listMembers();
 	
       out.print("<html><body>");
