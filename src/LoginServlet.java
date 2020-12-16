@@ -46,13 +46,13 @@ public class LoginServlet extends HttpServlet {
 //        String user_email = request.getParameter("user_email");
 //        String user_hp = request.getParameter("user_hp");
 
-        MemberVO memverVO = new MemberVO();
+        MemberVO1 memverVO = new MemberVO1();
         //받아온 아이디와 비밀번호 설정
         memverVO.setId(user_id);
         memverVO.setPwd(user_pw);
         MemberDAO6 dao = new MemberDAO6();
         //MemberDAO5의 isExisted메소드 호출, memverVO전달
-        boolean result = dao.isExisted(memverVO);
+        boolean result = dao.isExisted(memverVO1);
 
         String data = "<html><body>";
 

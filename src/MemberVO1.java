@@ -1,14 +1,14 @@
 
 import java.sql.Date;
 
-public class MemberVO {
+public class MemberVO1 {
 	private String id;
 	private String pwd;
 	private String name;
 	private String email;
 	private Date joinDate;
 	
-	public MemberVO() {
+	public MemberVO1() {
 		System.out.println("MemberVO 생성자 호출");
 	}
 
