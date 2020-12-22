@@ -16,7 +16,7 @@
 	<title>파일 업로드 창</title>
 </head>
 <body>
-	<form action ="${contextPath}/upload.do" method="post" enctype ="multipart/form-data">
+	<form action ="${contextPath}/FileUpload" method="post" enctype ="multipart/form-data">
 	
 	파일 1: <input type ="file" name = "file1" ><br>
 	파일 2: <input type ="file" name = "file1" ><br>

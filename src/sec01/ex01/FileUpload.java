@@ -1,4 +1,4 @@
-package test;
+package sec01.ex01;
 
 import java.io.File;
 import java.io.IOException;
